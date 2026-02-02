@@ -1,0 +1,150 @@
+\documentclass[14pt, a4paper]{extarticle}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage[left=30mm, right=10mm, top=20mm, bottom=25mm]{geometry}
+
+\usepackage{misccorr} % в заголовках появляется точка, но при ссылке на них ее нет
+\usepackage{indentfirst} % после заголовков ставится абзацный отступ
+
+% Заголовки section по центру %
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\centering\normalfont\Large\bfseries}}
+\makeatother
+%%%%%
+
+% Точки в списке литературы %
+\makeatletter
+\renewcommand\@biblabel[1]{#1.}
+\makeatother
+%%%%%
+
+\begin{document}
+\thispagestyle{empty}
+{\scriptsize
+\begin{center}
+ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ ОБРАЗОВАТЕЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ\\ 
+ВЫСШЕГО ОБРАЗОВАНИЯ    
+\end{center}
+}
+{\bf
+\begin{center}
+РГАУ-МСХА имени К.А. Тимирязева\\ 
+\end{center}
+}
+\hrule
+\bigskip
+
+{\small 
+\begin{center}
+\textbf{
+Кафедра <<Статистики и кибернетики>>}
+\end{center}
+}
+\bigskip
+
+Профиль
+
+\medskip
+Направленность
+
+\vskip 2cm
+
+\begin{center}
+\textbf{КУРСОВОЙ ПРОЕКТ}
+\end{center}
+
+\begin{center}
+по дисциплине:\\ 
+<<Методы и средства проектирования информационных систем и технологий>>    
+\end{center}
+
+
+\bigskip
+\begin{center}
+ТЕМА:\\ 
+Название темы
+\end{center}
+
+
+\vskip 4cm
+
+\hskip .4\textwidth Преподаватель:
+
+\hskip .4\textwidth Студент:
+
+\hskip .4\textwidth Курс: третий
+
+\vskip 7.0cm
+
+\begin{center}
+Липецк 2026
+\end{center}
+
+\newpage
+\tableofcontents
+\newpage
+\addcontentsline{toc}{section}{ВВЕДЕНИЕ}
+\section*{ВВЕДЕНИЕ}
+
+\newpage
+\section{НАЗВАНИЕ}
+Text \cite{book1}.
+
+Текст текст \( \int_a^b f(x)dx. \)
+\[
+\int_a^b f(x)dx.
+\]
+\subsection{Пункт}
+\begin{equation}\label{integral}
+    \int_{a}^b \sin x dx
+\end{equation}
+\begin{equation}\label{summa}
+    \sum\limits_{i=1}^n x_i
+\end{equation}
+\begin{equation}\label{alphabeta}
+    \alpha +\beta
+\end{equation}
+\subsection{Пункт}
+
+\newpage
+\section{НАЗВАНИЕ}
+text (\ref{summa})
+\subsection{Пункт}
+text (\ref{alphabeta})
+\subsection{Пункт}
+
+\newpage
+\section{НАЗВАНИЕ}
+\subsection{Пункт}
+\subsection{Пункт}
+
+\newpage
+\section{НАЗВАНИЕ}
+\subsection{Пункт}
+\subsection{Пункт}
+
+\newpage
+\addcontentsline{toc}{section}{ЗАКЛЮЧЕНИЕ}
+\section*{ЗАКЛЮЧЕНИЕ}
+
+\newpage
+\renewcommand\refname{\centering СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\clearpage% or cleardoublepage
+\addcontentsline{toc}{section}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\begin{thebibliography}{99}
+\bibitem{book3} Author Book2
+
+\bibitem{book1} Author Book1
+
+\bibitem{book2} Author Book2
+\end{thebibliography}
+
+\newpage
+\addcontentsline{toc}{section}{ПРИЛОЖЕНИЯ}
+\section*{ПРИЛОЖЕНИЯ}
+
+\end{document}

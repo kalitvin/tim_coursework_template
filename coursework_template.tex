@@ -6,6 +6,7 @@
 
 \usepackage{misccorr} % в заголовках появляется точка, но при ссылке на них ее нет
 \usepackage{indentfirst} % после заголовков ставится абзацный отступ
+\usepackage{graphicx}
 
 % Заголовки section по центру %
 \makeatletter
@@ -24,74 +25,90 @@
 
 \begin{document}
 \thispagestyle{empty}
-{\scriptsize
-\begin{center}
-ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ ОБРАЗОВАТЕЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ\\ 
-ВЫСШЕГО ОБРАЗОВАНИЯ    
-\end{center}
-}
-{\bf
-\begin{center}
-РГАУ-МСХА имени К.А. Тимирязева\\ 
-\end{center}
-}
-\hrule
+
+\noindent
+\begin{minipage}[c]{0.2\textwidth}
+    \includegraphics[width=0.8\linewidth]{tim-logo.png} % logo.png в той же папке
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.8\textwidth}
+    {\scriptsize
+    \begin{center}
+        \textbf{МИНИСТЕРСТВО СЕЛЬСКОГО ХОЗЯЙСТВА РОССИЙСКОЙ ФЕДЕРАЦИИ}\\[0.4cm]
+        ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \\[0.2cm]
+        \textbf{«РОССИЙСКИЙ ГОСУДАРСТВЕННЫЙ АГРАРНЫЙ УНИВЕРСИТЕТ  --\\
+        МСХА имени К.\,А.~ТИМИРЯЗЕВА}\\[0.2cm]
+        \textbf{(ФГБОУ ВО РГАУ -- МСХА имени К.\,А.~Тимирязева)}
+    \end{center}
+    }
+\end{minipage}
+
 \bigskip
+\noindent\rule{\textwidth}{0.4pt}\\[-2.3ex]
+\rule{\textwidth}{0.4pt}
 
-{\small 
+{\small
 \begin{center}
-\textbf{
-Кафедра <<Статистики и кибернетики>>}
+Институт экономики и управления\\[0.1cm]
+Кафедра статистики и кибернетики\\[0.5cm]
+Направление: 09.03.02 Информационные системы и технологии\\
+Направленность:
+Большие данные и машинное обучение\\[1cm]
 \end{center}
 }
-\bigskip
 
-Профиль
-
-\medskip
-Направленность
-
-\vskip 2cm
-
+{\Large
 \begin{center}
 \textbf{КУРСОВОЙ ПРОЕКТ}
 \end{center}
+}
 
+на тему: «Тема курсового проекта».\\[0.5cm]
+
+
+{\small 
+
+\hfill
+\begin{minipage}[l]{0.5\textwidth}
+Выполнил:\\
+Студент 3 курса группы Д-Э-??-??\\
+Фамилия И.\,О.\\
+
+Дата регистрации КП\\[1ex]
+на кафедре: \rule{4cm}{0.4pt}\\[0.2cm]
+
+Допущен к защите\\[0.2cm]
+Руководитель:\\[0.3cm]
+\rule{8cm}{0.4pt}\\
+\hspace*{1cm}{\footnotesize учёная степень, учёное звание, ФИО}\\[0.5cm]
+
+
+Члены комиссии:\\[0.2cm]
+\rule{6cm}{0.4pt}\hfill\rule{2cm}{0.4pt}\\[-2pt]
+{\footnotesize учёная степень, учёное звание, ФИО}\hfill{\footnotesize подпись}\\[0.2cm]
+\rule{6cm}{0.4pt}\hfill\rule{2cm}{0.4pt}\\[-2pt]
+{\footnotesize учёная степень, учёное звание, ФИО}\hfill{\footnotesize подпись}\\[0.2cm]
+\rule{6cm}{0.4pt}\hfill\rule{2cm}{0.4pt}\\[-2pt]
+{\footnotesize учёная степень, учёное звание, ФИО}\hfill{\footnotesize подпись}\\[0.5cm]
+
+Оценка \rule{6cm}{0.4pt}\\[0.4cm]
+Дата защиты \rule{5cm}{0.4pt}
+\end{minipage}
+}
+
+\vskip 1.5cm
 \begin{center}
-по дисциплине:\\ 
-<<Методы и средства проектирования информационных систем и технологий>>    
-\end{center}
-
-
-\bigskip
-\begin{center}
-ТЕМА:\\ 
-Название темы
-\end{center}
-
-
-\vskip 4cm
-
-\hskip .4\textwidth Преподаватель:
-
-\hskip .4\textwidth Студент:
-
-\hskip .4\textwidth Курс: третий
-
-\vskip 7.0cm
-
-\begin{center}
-Липецк 2026
+Москва 2026
 \end{center}
 
 \newpage
 \tableofcontents
 \newpage
-\addcontentsline{toc}{section}{ВВЕДЕНИЕ}
-\section*{ВВЕДЕНИЕ}
+\addcontentsline{toc}{section}{Введение}
+\section*{Введение}
 
 \newpage
-\section{НАЗВАНИЕ}
+\section{Глава 1. Теоретическая часть}
 Text \cite{book1}.
 
 Текст текст \( \int_a^b f(x)dx. \)
@@ -111,7 +128,7 @@ Text \cite{book1}.
 \subsection{Пункт}
 
 \newpage
-\section{НАЗВАНИЕ}
+\section{Глава 2. Практическая часть}
 text (\ref{summa})
 \subsection{Пункт}
 text (\ref{alphabeta})
@@ -128,13 +145,13 @@ text (\ref{alphabeta})
 \subsection{Пункт}
 
 \newpage
-\addcontentsline{toc}{section}{ЗАКЛЮЧЕНИЕ}
-\section*{ЗАКЛЮЧЕНИЕ}
+\addcontentsline{toc}{section}{Заключение}
+\section*{Заключение}
 
 \newpage
-\renewcommand\refname{\centering СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\renewcommand\refname{\centering Список использованных источников}
 \clearpage% or cleardoublepage
-\addcontentsline{toc}{section}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\addcontentsline{toc}{section}{Список использованных источников}
 \begin{thebibliography}{99}
 \bibitem{book3} Author Book2
 
@@ -144,8 +161,8 @@ text (\ref{alphabeta})
 \end{thebibliography}
 
 \newpage
-\addcontentsline{toc}{section}{ПРИЛОЖЕНИЯ}
-\section*{ПРИЛОЖЕНИЯ}
+\addcontentsline{toc}{section}{Приложения}
+\section*{Приложения}
 
 \end{document}
 

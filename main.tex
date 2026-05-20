@@ -1,0 +1,81 @@
+\documentclass[14pt, a4paper]{extarticle}
+
+
+\usepackage{timcw}
+
+\begin{document}
+
+% Титульный лист:
+% #1 – тема, #2 – группа, #3 – ФИО, #4 – город и год
+\cwtitle{Тема курсового проекта}{Д-Э-??-??}{Ворошилов М.\,В.}{Москва 2026}{09.03.02 Информационные системы и технологии}{Большие данные и машинное обучение}
+\newpage
+
+\tableofcontents
+\newpage
+
+\intro
+
+Текст введения.
+
+\newpage
+\section{Глава 1. Теоретическая часть}
+Text \cite{book1}.
+
+Текст текст \( \int_a^b f(x)\,dx. \)
+\[
+\int_a^b f(x)\,dx.
+\]
+
+\subsection{Пункт}
+\begin{equation}\label{integral}
+  \int_{a}^b \sin x\,dx
+\end{equation}
+\begin{equation}\label{summa}
+  \sum\limits_{i=1}^n x_i
+\end{equation}
+\begin{equation}\label{alphabeta}
+  \alpha + \beta
+\end{equation}
+
+\subsection{Пункт}
+
+\newpage
+\section{Глава 2. Практическая часть}
+text (\ref{summa})
+
+\subsection{Пункт}
+text (\ref{alphabeta})
+
+\subsection{Пункт}
+
+\newpage
+\section{Название}
+\subsection{Пункт}
+\subsection{Пункт}
+
+\newpage
+\section{Название}
+\subsection{Пункт}
+\subsection{Пункт}
+
+\newpage
+\conclusion
+
+Текст заключения.
+
+\newpage
+\centeredrefname
+\clearpage
+\addcontentsline{toc}{section}{Список использованных источников}
+\begin{thebibliography}{99}
+\bibitem{book3} Author Book3
+\bibitem{book1} Author Book1
+\bibitem{book2} Author Book2
+\end{thebibliography}
+
+\newpage
+\applications
+
+Текст приложений.
+
+\end{document}

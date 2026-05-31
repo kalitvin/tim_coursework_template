@@ -20,7 +20,7 @@
 \renewcommand{\chaptername}{Глава} % имя для текста и содержания
 % Заголовок главы: 14pt, межстрочный 16pt, жирный
 \titleformat{\chapter}
-  {\fontsize{16pt}{16pt}\bfseries} % оформление шрифта
+  {\fontsize{16pt}{16pt}\bfseries\centering} % оформление шрифта
   {\chaptername\ \thechapter.}                    % как выводить номер
   {1em}                            % отступ между номером и текстом
   {}                               % дополнительный код перед заголовком
@@ -42,7 +42,7 @@
 
 \renewcommand{\contentsname}{Содержание}
 % Шрифт заголовка оглавления:
-\renewcommand{\cfttoctitlefont}{\Large\bfseries} % размер + жирность
+\renewcommand{\cfttoctitlefont}{\Large\bfseries\centering} % размер + жирность
 \renewcommand{\cftaftertoctitle}{\hfill}         % выравнивание по центру
 
 % --- Заголовки section по центру ---

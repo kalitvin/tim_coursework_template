@@ -15,7 +15,35 @@
 \RequirePackage{indentfirst} % абзацный отступ после заголовков
 \RequirePackage{graphicx}
 
+\usepackage{titlesec}
 
+\renewcommand{\chaptername}{Глава} % имя для текста и содержания
+% Заголовок главы: 14pt, межстрочный 16pt, жирный
+\titleformat{\chapter}
+  {\fontsize{16pt}{16pt}\bfseries} % оформление шрифта
+  {\chaptername\ \thechapter.}                    % как выводить номер
+  {1em}                            % отступ между номером и текстом
+  {}                               % дополнительный код перед заголовком
+
+% Глава в содержании: 14pt, межстрочный 16pt, жирный
+%\renewcommand{\thechapter}{\arabic{chapter}}
+%\renewcommand{\chaptermark}[1]{\markboth{Глава \thechapter. #1}{}}
+
+\usepackage{tocloft}
+
+% "Глава 1." перед названием в оглавлении
+\renewcommand{\cftchappresnum}{Глава~} % префикс
+%\renewcommand{\cftchapaftersnum}{.\ }  % точка после номера
+
+% Подобрать ширину поля под "Глава 10."
+\newlength{\tocchaplen}
+\settowidth{\tocchaplen}{Глава~100.\ \ } % примерный максимум
+\setlength{\cftchapnumwidth}{\tocchaplen}
+
+\renewcommand{\contentsname}{Содержание}
+% Шрифт заголовка оглавления:
+\renewcommand{\cfttoctitlefont}{\Large\bfseries} % размер + жирность
+\renewcommand{\cftaftertoctitle}{\hfill}         % выравнивание по центру
 
 % --- Заголовки section по центру ---
 \makeatletter
@@ -23,7 +51,7 @@
   \@startsection{section}{1}{\z@}%
     {-3.5ex \@plus -1ex \@minus -.2ex}%
     {2.3ex \@plus .2ex}%
-    {\centering\normalfont\Large\bfseries}%
+    {\centering\bfseries}%
 }
 \makeatother
 
@@ -44,16 +72,16 @@
 \thispagestyle{empty}
 
 \noindent
-\begin{minipage}[c]{0.2\textwidth}
-  \includegraphics[width=0.8\linewidth]{tim-logo.png}%
+\begin{minipage}[c]{0.12\textwidth}
+  \includegraphics[width=0.96\linewidth]{tim-logo.png}%
 \end{minipage}%
 \hfill
-\begin{minipage}[c]{0.8\textwidth}
+\begin{minipage}[c]{0.88\textwidth}
   {\scriptsize
   \begin{center}
-    \textbf{МИНИСТЕРСТВО СЕЛЬСКОГО ХОЗЯЙСТВА РОССИЙСКОЙ ФЕДЕРАЦИИ}\\[0.4cm]
+    \textbf{МИНИСТЕРСТВО СЕЛЬСКОГО ХОЗЯЙСТВА РОССИЙСКОЙ ФЕДЕРАЦИИ}\\[0.2cm]
     ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \\[0.2cm]
-    \textbf{«РОССИЙСКИЙ ГОСУДАРСТВЕННЫЙ АГРАРНЫЙ УНИВЕРСИТЕТ  --\\
+    \textbf{«РОССИЙСКИЙ ГОСУДАРСТВЕННЫЙ АГРАРНЫЙ УНИВЕРСИТЕТ  --
     МСХА имени К.\,А.~ТИМИРЯЗЕВА}\\[0.2cm]
     \textbf{(ФГБОУ ВО РГАУ -- МСХА имени К.\,А.~Тимирязева)}
   \end{center}
@@ -61,7 +89,7 @@
 \end{minipage}
 
 \bigskip
-\noindent\rule{\textwidth}{0.4pt}\\[-2.3ex]
+\noindent\rule{\textwidth}{0.4pt}\\[-2.0ex]
 \rule{\textwidth}{0.4pt}
 
 {\small
@@ -80,7 +108,7 @@
 \end{center}
 }
 
-на тему: «#1».\\[0.5cm]
+на тему: «#1».\\[1.0cm]
 
 {\small
 \hfill
@@ -125,16 +153,16 @@
 
 % --- Удобные команды для Введения, Заключения, Приложений ---
 \newcommand{\intro}{%
-  \addcontentsline{toc}{section}{Введение}%
-  \section*{Введение}%
+  \addcontentsline{toc}{chapter}{Введение}%
+  \chapter*{Введение}%
 }
 
 \newcommand{\conclusion}{%
-  \addcontentsline{toc}{section}{Заключение}%
-  \section*{Заключение}%
+  \addcontentsline{toc}{chapter}{Заключение}%
+  \chapter*{Заключение}%
 }
 
 \newcommand{\applications}{%
-  \addcontentsline{toc}{section}{Приложения}%
-  \section*{Приложения}%
+  \addcontentsline{toc}{chapter}{Приложения}%
+  \chapter*{Приложения}%
 }

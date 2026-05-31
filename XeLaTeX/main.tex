@@ -1,6 +1,6 @@
 % !TEX program = xelatex
 
-\documentclass[12pt,a4paper]{article}
+\documentclass[14pt,a4paper]{extreport}
 
 %\setmainfont{Times New Roman}
 %\setsansfont{Arial}
@@ -8,8 +8,6 @@
 
 %\setmainfont{TeX Gyre Termes}[Ligatures=TeX]
 %\usepackage{newtxmath}
-
-
 
 %\setmainfont{CMU Serif}[Ligatures=TeX]
 %\setsansfont{CMU Sans Serif}[Ligatures=TeX]
@@ -37,6 +35,7 @@
 \cwtitle{Тема курсового проекта}{Д-Э-??-??}{Ворошилов М.\,В.}{Москва 2026}{09.03.02 Информационные системы и технологии}{Большие данные и машинное обучение}
 \newpage
 
+\renewcommand{\contentsname}{Содержание}
 \tableofcontents
 \newpage
 
@@ -45,7 +44,7 @@
 Текст введения.
 
 \newpage
-\section{Глава 1. Теоретическая часть}
+\chapter[Глава \thechapter. Теоретическая часть]{Теоретическая часть}
 Text \cite{book1}.
 
 Текст текст \( \int_a^b f(x)\,dx. \)
@@ -53,7 +52,7 @@ Text \cite{book1}.
 \int_a^b f(x)\,dx.
 \]
 
-\subsection{Пункт}
+\section{Пункт}
 \begin{equation}\label{integral}
   \int_{a}^b \sin x\,dx
 \end{equation}
@@ -64,26 +63,26 @@ Text \cite{book1}.
   \alpha + \beta
 \end{equation}
 
-\subsection{Пункт}
+\section{Пункт}
 
 \newpage
-\section{Глава 2. Практическая часть}
+\chapter[Глава \thechapter. Практическая часть]{Практическая часть}
 text (\ref{summa})
 
-\subsection{Пункт}
+\section{Пункт}
 text (\ref{alphabeta})
 
-\subsection{Пункт}
+\section{Пункт}
 
 \newpage
-\section{Название}
-\subsection{Пункт}
-\subsection{Пункт}
+\chapter[Глава \thechapter. Название]{Название}
+\section{Пункт}
+\section{Пункт}
 
 \newpage
-\section{Название}
-\subsection{Пункт}
-\subsection{Пункт}
+\chapter[Глава \thechapter. Название]{Название}
+\section{Пункт}
+\section{Пункт}
 
 \newpage
 \conclusion
@@ -93,7 +92,7 @@ text (\ref{alphabeta})
 \newpage
 \centeredrefname
 \clearpage
-\addcontentsline{toc}{section}{Список использованных источников}
+\addcontentsline{toc}{chapter}{Список использованных источников}
 \begin{thebibliography}{99}
 \bibitem{book3} Author Book3
 \bibitem{book1} Author Book1
